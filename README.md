@@ -13,6 +13,6 @@ I have great motivation and creativ drive for this Project and i wont stop/
 PPL tell me i have to get things approven but im a doer not a not-doer, haha/
 
 I dont really know what im writing for but if u read this/ TEXT ME ;) 
-Im looking forward to meet some intelectual-creativ minds/ 
+Im looking forward to meet new intelectual like-minded creatives/ 
 
 Peace/
