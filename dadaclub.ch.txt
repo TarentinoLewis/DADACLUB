@@ -1,0 +1,18 @@
+dadaclub.ch 3600 IN SOA ns.hostpoint.ch hostmaster.hostpoint.ch 1744188213 86400 7200 3628800 3600
+dadaclub.ch 3600 IN NS ns3.hostpoint.ch
+dadaclub.ch 3600 IN NS ns.hostpoint.ch
+dadaclub.ch 3600 IN NS ns2.hostpoint.ch
+dadaclub.ch 3600 IN MX 10 mx2.mail.hostpoint.ch
+dadaclub.ch 3600 IN MX 10 mx1.mail.hostpoint.ch
+*.dadaclub.ch 3600 IN MX 10 mx2.mail.hostpoint.ch
+*.dadaclub.ch 3600 IN MX 10 mx1.mail.hostpoint.ch
+autoconfig.dadaclub.ch 300 IN CNAME autoconfig.mail.hostpoint.ch
+autodiscover.dadaclub.ch 300 IN CNAME autoconfig-nonssl.mail.hostpoint.ch
+lists.dadaclub.ch 300 IN CNAME lists.admin.hostpoint.ch
+www.dadaclub.ch 300 IN CNAME TarentinoLewis.github.io
+dadaclub.ch 300 IN A 185.199.110.153
+dadaclub.ch 300 IN A 185.199.109.153
+dadaclub.ch 300 IN A 185.199.108.153
+dadaclub.ch 300 IN A 185.199.111.153
+_github-pages-challenge-tarentinolewis.dadaclub.ch 300 IN TXT "1ed62e54c5bf66109e1eff841c13b2"
+dadaclub.ch 300 IN TXT "v=spf1 redirect=spf.mail.hostpoint.ch"
