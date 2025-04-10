@@ -2,30 +2,146 @@
 <html lang="en">
 
 <head>
-    <!-- Basic meta tags for character encoding and responsive design -->
+    <!-- Meta tags for responsive and SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO meta description for better search engine visibility -->
-    <meta name="description" content="DADACLUB - Underground Music Experience">
-
-    <!-- Title of the webpage -->
+    <meta name="description" content="DADACLUB - Underground Music Experience with a modern, symmetrical design inspired by Apple.">
     <title>DADACLUB - Underground Music</title>
 
-    <!-- Link to the external CSS file -->
+    <!-- Apple-like font and styling -->
     <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'SF Pro Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        header.hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #ffffff, #f9f9f9);
+        }
+
+        header.hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        header.hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #0071e3;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Card Component for Symmetrical Design */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #6e6e73;
+        }
+
+        /* Feedback Form */
+        form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea, form button {
+            display: block;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 500px;
+            padding: 15px;
+            border: 1px solid #d2d2d7;
+            border-radius: 12px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background-color: #0071e3;
+            color: white;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer Section */
+        footer {
+            padding: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #6e6e73;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Hero Section: Introduction and Navigation -->
+    <!-- Hero Section with Welcome Message -->
     <header class="hero">
-        <!-- Main heading (H1) for the page -->
         <h1>Welcome to DADACLUB</h1>
-        <!-- Subheading with a brief description -->
         <p>An underground music experience like no other.</p>
-
-        <!-- Navigation bar linking to other parts of the website -->
-        <nav role="navigation">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Public/events.html">Events</a></li>
@@ -36,28 +152,28 @@
         </nav>
     </header>
 
-    <!-- About Section: Information about DADACLUB -->
+    <!-- About Section with Symmetrical Card Design -->
     <section class="about">
         <h2>About Us</h2>
-        <p>DADACLUB is a haven for underground music lovers. A place where beats define the night and creativity knows no bounds.
-            Come join us and dance in the Dark with DADA SOUNDSYSTEMS AND FRIENDS.</p>
+        <div class="card">
+            <img src="src/images/about.jpg" alt="About DADACLUB">
+            <h3>Who We Are</h3>
+            <p>DADACLUB is a haven for underground music lovers. A place where beats define the night and creativity knows no bounds. Come join us and dance in the dark with DADA SOUNDSYSTEMS AND FRIENDS.</p>
+        </div>
     </section>
 
-    <!-- Feedback Section: A form to collect user feedback -->
+    <!-- Feedback Section with Centered Form -->
     <section class="feedback">
         <h2>Feedback</h2>
         <p>We value your feedback. Let us know what you think about DADACLUB!</p>
         <form action="#" method="POST">
-            <!-- Input for user's name -->
             <input type="text" name="name" placeholder="Enter your name" required>
-            <!-- Textarea for user's feedback -->
             <textarea name="feedback" rows="5" placeholder="Provide your feedback" required></textarea>
-            <!-- Submit button for the form -->
             <button type="submit">Submit</button>
         </form>
     </section>
 
-    <!-- Footer Section: Copyright and additional links -->
+    <!-- Footer Section -->
     <footer>
         <p>© 2025 DADACLUB. All rights reserved.</p>
     </footer>
