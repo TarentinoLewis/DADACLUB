@@ -66,3 +66,16 @@ nav ul li a.active {
     font-weight: bold;
     color: #ff4500; /* Highlight the active link */
 }
+
+@media (max-width: 768px) {
+    header.hero h1 {
+        font-size: 2rem;
+    }
+    .card {
+        padding: 10px;
+        margin: 10px;
+    }
+    form input, form textarea, form button {
+        width: 100%;
+    }
+}
