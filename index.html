@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const feedback = document.querySelector('textarea[name="feedback"]').value.trim();
+
+        if (!name || !feedback) {
+            event.preventDefault();
+            alert('Please fill in all fields.');
+        }
+    });
+</script>
+    
 <head>
     <!-- Meta tags for responsive and SEO -->
     <meta charset="UTF-8">
