@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - DADACLUB</title>
-    <link rel="stylesheet" href="/src/styles/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DADACLUB – Contact</title>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Public/events.html">Events</a></li>
-                <li><a href="Public/membership.html">Membership</a></li>
-                <li><a href="Public/gallery.html">Gallery</a></li>
-                <li><a href="Public/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="contact">
-        <h2>We'd love to hear from you!</h2>
-        <form action="#" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <footer>
-        <p>© 2025 DADACLUB. All rights reserved.</p>
-    </footer>
+  <div id="header"></div>
+
+  <div class="container">
+    <h1>CONTACT US</h1>
+    <p>Want to collaborate, perform, or just say something absurd?</p>
+    <p>Email us at: <a href="mailto:chaos@dadaclub.ch">chaos@dadaclub.ch</a></p>
+
+    <form>
+      <label for="name">Your Name</label><br/>
+      <input type="text" id="name" name="name" /><br/><br/>
+
+      <label for="message">Message</label><br/>
+      <textarea id="message" name="message"></textarea><br/><br/>
+
+      <button type="submit">Send Into The Void</button>
+    </form>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/js/load-layout.js"></script>
 </body>
 </html>
