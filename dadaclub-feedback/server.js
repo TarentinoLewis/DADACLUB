@@ -3,9 +3,19 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import fs from 'fs';
 
+const express = require('express');
 const app = express();
-const PORT = 3000;
+const path = require('path');
 
+app.use(express.static('public', {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache');
+    } else {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+  }
+}));
 app.use(cors());
 app.use(bodyParser.json());
 
