@@ -1,1 +1,17 @@
-
+{
+  "name": "dadaclub",
+  "version": "1.0.0",
+  "description": "Underground Music Experience Website by DADACLUB",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Finn (Tarentino Lewis)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
