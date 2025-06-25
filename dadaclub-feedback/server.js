@@ -1,47 +1,29 @@
-const express = require("express");
-const fs = require("fs");
-const cors = require("cors");
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import fs from 'fs';
 
 const app = express();
 const PORT = 3000;
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
-const feedbackFile = "feedback.json";
-
-// POST /feedback – Nachricht speichern
-app.post("/feedback", (req, res) => {
+app.post('/feedback', (req, res) => {
   const { name, message } = req.body;
-
-  if (!name || !message) {
-    return res.status(400).json({ message: "Name und Nachricht erforderlich." });
-  }
-
   const feedback = { name, message, date: new Date().toISOString() };
 
-  let data = [];
-  if (fs.existsSync(feedbackFile)) {
-    data = JSON.parse(fs.readFileSync(feedbackFile));
-  }
+  fs.readFile('feedback.json', 'utf8', (err, data) => {
+    const feedbacks = data ? JSON.parse(data) : [];
+    feedbacks.push(feedback);
 
-  data.push(feedback);
-  fs.writeFileSync(feedbackFile, JSON.stringify(data, null, 2));
-
-  res.json({ message: "Vielen Dank für dein Feedback!" });
-});
-
-// GET /feedback – Alle Nachrichten anzeigen
-app.get("/feedback", (req, res) => {
-  if (fs.existsSync(feedbackFile)) {
-    const data = JSON.parse(fs.readFileSync(feedbackFile));
-    res.json(data);
-  } else {
-    res.json([]);
-  }
+    fs.writeFile('feedback.json', JSON.stringify(feedbacks, null, 2), err => {
+      if (err) return res.status(500).json({ message: 'Fehler beim Speichern' });
+      res.json({ message: 'Danke für dein Feedback!' });
+    });
+  });
 });
 
 app.listen(PORT, () => {
   console.log(`Server läuft auf http://localhost:${PORT}`);
 });
-
